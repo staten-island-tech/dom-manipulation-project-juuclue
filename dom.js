@@ -1,8 +1,16 @@
 const DOMselectors = {
-    button: document.getElementById("btc"),
+    bigbootycheeks: document.getElementById("btc"),
 
-const text document.querySelector("#form"),
-}
+    cheeks:document.querySelector("#cheeks"),
+
+    point: document.querySelectorAll(".point"),
+
+//    empty: document.querySelector(".nothing"),
+
+};
+//const bigbootycheeks = document.getElementById("btc");
+//const text = document.querySelector("#text");
+console.log(DOMselectors.point);
 //    firstName:document.querySelector(".first-name"),
 //    h2s:document.querySelectorAll("h2"),
 //};
