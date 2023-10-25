@@ -8,9 +8,12 @@ const DOMselectors = {
 //    empty: document.querySelector(".nothing"),
 
 };
+console.log(DOMselectors);
+
+function 
 //const bigbootycheeks = document.getElementById("btc");
 //const text = document.querySelector("#text");
-console.log(DOMselectors.point);
+
 //    firstName:document.querySelector(".first-name"),
 //    h2s:document.querySelectorAll("h2"),
 //};
