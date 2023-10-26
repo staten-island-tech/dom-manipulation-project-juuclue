@@ -9,10 +9,15 @@
 };
 */
 //console.log(DOMselectors);
+let btnclear = document.querySelector('button');
+let inputs = document.querySelectorAll('input');
+
+btnclear.addEventListener('click', () => {
+ inputs.forEach(input => input.value = '');
+});
 
 
-
-const insert = document.querySelector("#insert");
+/* const insert = document.querySelector("#insert");
 insert.addEventListener("click", () => {
   const subject = document.querySelector("#subject");
   const positionSelect = document.querySelector("#position");
@@ -22,17 +27,19 @@ insert.addEventListener("click", () => {
   );
 });
 
-const reset = document.querySelector("#reset");
-reset.addEventListener("click", () => {
+const del = document.querySelectorAll("#del");
+del.addEventListener("click", () => {
   document.location.reload();
-});
-const firstname = (prompt("type your firstname"));
-const lastname = (prmpt("type your lastname"));
-console.log(insert);
+}); */
 
-function fun(){  
-    document.getElementById("myForm").reset();  
-}
+/* const submit = document.querySelectorAll("submit");
+submit.addEventListener("click", () => {
+  document.location.savedata();
+});
+document.querySelector("#delete").addEventListener('click', () => {
+  document.getElementById("input").innerHTML = ''
+}); */
+
 //DOMselectors.form.addEventListener("submit", function(event)){
 
 //}
