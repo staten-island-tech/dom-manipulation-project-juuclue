@@ -1,21 +1,25 @@
-/*const DOMselectors = {
+const DOMselectors = {
     bigbootycheeks: document.getElementById("btc"),
     cheeks:document.querySelector("#cheeks"),
     purr:document.getElementById("purr"),
     point: document.querySelectorAll(".point"),
+    empty: document.querySelector(".nothing"),
+    card:document.querySelector(".card"),
+    cardimg:document.querySelector(".cardimg"),
+    
 
-//    empty: document.querySelector(".nothing"),
+console.log(DOMselectors);
 
-};
-*/
-//console.log(DOMselectors);
-let btnclear = document.querySelector('button');
-let inputs = document.querySelectorAll('input');
+/* function remove(){
+  let btns = document.querySelectorAll("button");
+  btns.forEach((button)=> button.addEventListener("click", function(event){
+    console.log(event.target.parentElement);
+  })
+  );
+  
+}
 
-btnclear.addEventListener('click', () => {
- inputs.forEach(input => input.value = '');
-});
-
+remove(); */
 
 /* const insert = document.querySelector("#insert");
 insert.addEventListener("click", () => {
