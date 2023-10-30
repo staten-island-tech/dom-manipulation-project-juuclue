@@ -4,42 +4,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <link rel="stylesheet" href="style.css">
+
     <h1 class="cardtitle">Spongegbob characters</h1>
     <script src="dom.js"></script>
 <div class="header">
     <form action= " " id="form">
         <label for="Spongebobcharacter">character's firstname</label>
-        <input type = "text" name="character" class = "character">
+        <input type = "text" name="character" class = "character" required>
 
         <label for="name">character's lastname</label>
-        <input type="text" name="name" class="name">
+        <input type="text" name="name" class="name" required>
 
-        <label for="pic">picture of spongebob character </label>
-        <input type="text" name="pic" class="pic">
-        <input type="submit" value="submit">
+        <label for="pic">picture of spongebob character URL </label>
+        <input type="text" name="pic" class="pic" required>
 
+        
+        <input type="submit" value="submit" class = "btn">
+<button type = "button" id=""btn>click me</button>
+        <div class = "box"></div>
+
+ 
         <div class = "gallery"> 
             <div class = "cards">
         <h3 class = "subheader"> spongebob!</h3>
             <img class = "images" src="https://www.diamondartclub.com/cdn/shop/collections/SpongeBob_SquarePants.jpg?v=1657679842" alt="">
-            </div>
-<!--         <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li>
-        <li></li> -->
-    </form>
+            </div> 
 </div>
-<!-- <div class ="container">
-<h3>charactername</h3>
-<img src="" alt="">
-</div> -->
+    </form>
+
+
 </body>
 </html>
