@@ -7,30 +7,37 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
+<script src="index.js" type="module" ></script>
+    <h1>spongebob characters</h1>
+    <section class="form-parent">
+        <form id = "form">
+            <div class = "form-inputs">
+                <div class = "form-input">
+                    <label for = "Spongebobcharacter">character name</label>
+                    <input type = "text" id="Name" class="text-box" required>
+                </div>
+                <div class ="form-input">
+                    <label for="role">role</label>
+                    <input type = "text" id = "role" class = "text-box" required>
+                </div>
 
-    <h1 class="cardtitle">Spongegbob characters</h1>
-    <script src="dom.js"></script>
-<div class="header">
-    <form action= " " id="form">
-        <label for="Spongebobcharacter">character's firstname</label>
-        <input type = "text" name="character" class = "character" required>
-
-        <label for="name">character's lastname</label>
-        <input type="text" name="name" class="name" required>
-
-        <label for="pic">picture of spongebob character URL </label>
-        <input type="text" name="pic" class="pic" required>
-
-        
-        <input type="submit" value="submit" class = "btn">
-<button type = "button" id=""btn>click me</button>
-        <div class = "box"></div>
-
- 
-
-
-    </form>
-
-
-</body>
+                <div class = "form-input">
+                    <label for = "url">URL</label>
+                    <input type = "text" id="url" class = "text-box" required>
+                </div>
+            </div>
+            <div class = "hero-form-input">
+                <input type = "submit" value="submit" class = "btn">
+            </div>
+            <button type = "button" id="removeButton">remove</button>
+        </form>
+    </section>
+    <section class ="display" id="display">
+<!--         <div class ="display-card" >
+        <img class ="display-img" src="https://static.wikia.nocookie.net/cartoons/images/e/ed/Profile_-_SpongeBob_SquarePants.png/revision/latest?cb=20230305115632">
+        <h2 class="display-role">talking sponge</h2>
+        <h3 class="display-name">Spongebob</h3>
+        <button class="remove btn">remove album</button>
+    </div> -->
+    </section>
 </html>

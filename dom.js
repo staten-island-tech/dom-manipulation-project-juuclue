@@ -1,12 +1,12 @@
 const DOMSelectors = {
 
-    character: document.querySelector(".character"),
-    name: document.querySelector(".name"),
-    pic: document.querySelector(".pic"),
-    box: document.querySelector(".box"),
+    role: document.querySelector(".character"),
+    Name: document.querySelector(".name"),
+    url: document.querySelector(".pic"),
     form: document.querySelector(".form"),
     btn: document.querySelector(".btn"),
     display: document.querySelector(".display"),
+    removeButton: document.querySelector(".removeButton"),
 
 };
 
@@ -14,15 +14,16 @@ const DOMSelectors = {
 document.getElementById("form").addEventListener("submit", function(e) {
   e.preventDefault();
   const card = {};
-  card.name = document.getElementById("name").value;
-  card.character = document.getElementById("character").value;
-  card.pic = document.getElementById("pic").value;
+  card.Name = document.getElementById("name").value;
+  card.role = document.getElementById("role").value;
+  card.url = document.getElementById("url").value;
 
   DOMSelectors.display.insertAdjacentHTML(
     "afterbgin",
     `<div class = "display-card">
-    <img class = "display-img"> src = "${pic.value}" alt=""
-    <h2 class = "display-name">${name.value}</h2>
+    <img class = "display-img"> src = "${url.value}" alt=""
+    <h2 class = "display-name">${Name.value}</h2>
+    <h3 class="display-role">${role.value}</h3>
     <button class = "remove btn> remove pic</button>
     </div>`
   );
@@ -36,32 +37,22 @@ remove(DOMSelectors.display);
 });
 
 function insert(card) {
-  DOMSelectors.displayname = card.name;
-  DOMSelectors.displaycharacter = card.character;
-  DOMSelectors.displaypic = card.pic;
+  DOMSelectors.displayName = card.Name;
+  DOMSelectors.displayRole= card.role;
+  DOMSelectors.displayUrl = card.url;
 };
-/* function card () {
-`<div class = "cards">
-<h3 class = "subheader"> spongebob!</h3>
-    <img class = "images" src="https://www.diamondartclub.com/cdn/shop/collections/SpongeBob_SquarePants.jpg?v=1657679842" alt="">
-    </div>`}
 
-    DOMselectors.removeButton = document.querySelector(".remove");
-    inject(album);
-    clear();
-    removeEventListener(DOMselectors.display);
- */
 function clear() {
-DOMSelectors.name.value = "";
-DOMSelectors.character.value = "";
-DOMSelectors.pic.value = "";
-}
+DOMSelectors.Name.value = "";
+DOMSelectors.role.value = "";
+DOMSelectors.url.value = "";
+};
 
 function remove() {
 DOMSelectors.removeButton.addEventListener("click", function () {
   document.querySelector(".display-card").remove();
 });
-DOMSelectors.displayname = "";
-DOMSelectors.displaycharacter="";
-DOMSelectors.displaypic  = "";
+DOMSelectors.displayName = "";
+DOMSelectors.displayRole="";
+DOMSelectors.displayUrl  = "";
 };

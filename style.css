@@ -1,4 +1,4 @@
-.gallery{
+.form-input{
     display: flex;
     flex-wrap: wrap;
     align-content:center;
@@ -9,7 +9,7 @@
 }
 
 
-.cards{
+.display-card{
 text-align: center;
 padding-top:3vh;
 display:flex;
@@ -17,7 +17,7 @@ width:30%;
 background-color: lightyellow;
 }
 
-.images{
+.display-img{
     width: 400px;
     height:400px;
     border:10px solid;
