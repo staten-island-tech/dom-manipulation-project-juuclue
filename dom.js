@@ -14,7 +14,7 @@ const DOMSelectors = {
 document.getElementById("form").addEventListener("submit", function(e) {
   e.preventDefault();
   const card = {};
-  card.Name = document.getElementById("name").value;
+  card.Name = document.getElementById("Name").value;
   card.role = document.getElementById("role").value;
   card.url = document.getElementById("url").value;
 
@@ -56,3 +56,9 @@ DOMSelectors.displayName = "";
 DOMSelectors.displayRole="";
 DOMSelectors.displayUrl  = "";
 };
+DOMSelectors.form.addEventListener("submit", function(event) {
+  event.preventDefault();
+clear();
+remove();
+insert();
+})
