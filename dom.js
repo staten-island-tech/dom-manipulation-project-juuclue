@@ -1,10 +1,10 @@
 const DOMSelectors = {
 
-    role: document.querySelector(".character"),
-    Name: document.querySelector(".name"),
-    url: document.querySelector(".pic"),
+    role: document.querySelector(".role"),
+    Name: document.querySelector(".Name"),
+    url: document.querySelector(".url"),
     form: document.querySelector(".form"),
-    btn: document.querySelector(".btn"),
+    submit: document.querySelector(".submit"),
     display: document.querySelector(".display"),
     removeButton: document.querySelector(".removeButton"),
 
@@ -21,8 +21,8 @@ document.getElementById("form").addEventListener("submit", function(e) {
   DOMSelectors.display.insertAdjacentHTML(
     "afterbgin",
     `<div class = "display-card">
-    <img class = "display-img"> src = "${url.value}" alt=""
-    <h2 class = "display-name">${Name.value}</h2>
+    <img class = "display-url"> src = "${url.value}" alt=""
+    <h2 class = "display-Name">${Name.value}</h2>
     <h3 class="display-role">${role.value}</h3>
     <button class = "remove btn> remove pic</button>
     </div>`
@@ -30,7 +30,7 @@ document.getElementById("form").addEventListener("submit", function(e) {
 
 
 
-DOMSelectors.removeButton = document.querySelector(".remove");
+DOMSelectors.removeButton = document.querySelectorAll(".remove");
 insert(card);
 clear();
 remove(DOMSelectors.display);
@@ -49,16 +49,18 @@ DOMSelectors.url.value = "";
 };
 
 function remove() {
-DOMSelectors.removeButton.addEventListener("click", function () {
+/* DOMSelectors.removeButton.addEventListener("click", function () {
   document.querySelector(".display-card").remove();
-});
+}); */
 DOMSelectors.displayName = "";
 DOMSelectors.displayRole="";
 DOMSelectors.displayUrl  = "";
 };
+console.log(remove);
 DOMSelectors.form.addEventListener("submit", function(event) {
   event.preventDefault();
 clear();
 remove();
 insert();
 })
+
