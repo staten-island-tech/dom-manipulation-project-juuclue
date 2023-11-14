@@ -1,29 +1,68 @@
-.form-input{
-    display: flex;
-    flex-wrap: wrap;
-    align-content:center;
-    width:80%;
-    margin-top: 2vh;
-    margin-bottom:3vh;
-
+body,
+html,
+* {
+    font-size: 62.5%;
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    background-color: lightgray;
+}
+.gallery {
+   display: flex;
+   align-items: center;
+   text-align: center;
+   flex-wrap: wrap;
+   justify-content: space-around;
 }
 
+#form {
+    font-size: 40px;
+}
 
-.display-card{
+.header {
+display: flex;
+align-items: center;
 text-align: center;
-padding-top:3vh;
-display:flex;
-width:30%;
-background-color: lightyellow;
+flex-wrap: wrap;
+justify-content: space-around;
 }
 
-.display-img{
-    width: 400px;
-    height:400px;
-    border:10px solid;
-    margin: 0 auto;
-    padding: 0 auto;
-    box-shadow: 10px 10px 50px rgb(209,231,255);
+.card {
+
+    align-content: center;
+    font-size: 3rem;
+    background-color: grey;
+    padding: 2%;
+    margin: 2rem 0;
+    border: 1px solid grey;
+    border-radius: 5px;
+    box-shadow: 10px 10px white;
+    transition: all .3s;
+    width: 23%;
+    height: 42vh;
 }
+.cardimg {
+ 
+    outline-offset: 1rem;
+    width: 240px;
+}
+
+.title {
+    text-align: center;
+    background-color: lightgrey;
+    font-size: 5rem;
+    width: 140rem;
+    margin: 6rem auto;
+    border: 5px solid white;
+    border-radius: 10px;
+    box-shadow: 10px 10px white;
+}
+
+.btn {
+    background-color: white;
+    border-radius: 10px;
+    margin-top: 1rem;
+}
+
 
 

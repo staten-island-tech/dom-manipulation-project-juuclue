@@ -4,41 +4,37 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <link rel="stylesheet" href="style.css">
+
 </head>
 <body>
+    <link rel="stylesheet" href="style.css">
 
-    <h1>spongebob characters</h1>
-    <section class="form-parent">
-        <form id = "form">
-            <div class = "form-inputs">
-                <div class = "form-input">
-                    <label for = "Name">character name</label>
-                    <input type = "text" id="Name" class="text-box" required>
-                </div>
-                <div class ="form-input">
-                    <label for="role">role</label>
-                    <input type = "text" id = "role" class = "text-box" required>
-                </div>
+    <h1 class ="title">Sea Creatures!</h1>
 
-                <div class = "form-input">
-                    <label for = "url">URL</label>
-                    <input type = "text" id="url" class = "text-box" required>
-                </div>
-            </div>
-            <div class = "hero-form-input">
-                <input type = "submit" id="submit" class = "btn">
-            </div>
-            <button type = "button" id="removeButton">remove</button>
-        </form>
-    </section>
-    <section class ="display" id="display">
-<!--         <div class ="display-card" >
-        <img class ="display-img" src="https://static.wikia.nocookie.net/cartoons/images/e/ed/Profile_-_SpongeBob_SquarePants.png/revision/latest?cb=20230305115632">
-        <h2 class="display-role">talking sponge</h2>
-        <h3 class="display-name">Spongebob</h3>
-        <button class="remove btn">remove album</button>
-    </div> -->
-    </section>
-    <script src="dom.js" ></script>   
+    <div class="header">
+        <form action="" id="form">
+            <label for="creature">sea creature</label>
+            <input type="text" name="creature" class="creature">
+
+            <label for="name"> cute? </label>
+            <input type="text" name="name" class="name">
+
+            <label for="url"> picture of the creature!</label>
+            <input type="text" name="url" class="url">
+            <input type="submit" value="submit">
+
+        </form> 
+</div>
+
+ <div class="gallery">
+    <!-- <div class="card">
+        <h3>sea creature</h3>
+
+        <img src="https://catholicfootnotes.files.wordpress.com/2021/07/blobfish.jpeg?w=640" alt= "" class ="cardimg">
+        <h4>sea creature!</h4>
+        <button class="btn">remove</button>
+    </div>  -->
+</div>
+    <script src="dom.js" ></script>    
+    </body>
 </html>

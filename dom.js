@@ -1,66 +1,57 @@
 const DOMSelectors = {
 
-    role: document.querySelector(".role"),
-    Name: document.querySelector(".Name"),
-    url: document.querySelector(".url"),
-    form: document.querySelector(".form"),
-    submit: document.querySelector(".submit"),
-    display: document.querySelector(".display"),
-    removeButton: document.querySelector(".removeButton"),
+ form: document.querySelector("#form"), 
+ creature: document.querySelector(".creature"),
+ name: document.querySelector(".name"),
+ url: document.querySelector(".url"),
+ gallery: document.querySelector(".gallery"),
+ card: document.querySelector(".card"),
+ cardimg: document.querySelector(".cardimg"),
+ button: document.querySelector(".btn"),
 
 };
 
-
-document.getElementById("form").addEventListener("submit", function(e) {
-  e.preventDefault();
-  const card = {};
-  card.Name = document.getElementById("Name").value;
-  card.role = document.getElementById("role").value;
-  card.url = document.getElementById("url").value;
-
-  DOMSelectors.display.insertAdjacentHTML(
-    "afterbgin",
-    `<div class = "display-card">
-    <img class = "display-url"> src = "${url.value}" alt=""
-    <h2 class = "display-Name">${Name.value}</h2>
-    <h3 class="display-role">${role.value}</h3>
-    <button class = "remove btn> remove pic</button>
+function divCreator(creature, name, url){
+  DOMSelectors.gallery.insertAdjacentHTML(
+    "afterbegin",
+    `div class="gallery"> 
+    <div class="card">
+    <h3>${name}</h3> 
+    <img src ="${url}" alt= "" class="cardimg">
+    <h4>${creature}</h4>
+    <button class="btn"> Remove</button>
+    </div>
     </div>`
-  );
+  )
+};
+function insert(){
+    DOMSelectors.form.addEventListener("submit", function(event){
+    event.preventDefault();
+    const creature= DOMSelectors.creature.value
+    const name = DOMSelectors.name.value
+    const url= DOMSelectors.url.value
+    divCreator(creature, name, url)
+    const removebuttons= document.querySelectorAll(".btn");
+    removebuttons.forEach((button)=> {
+      button.addEventListener("click", function(event){
+      const objectRemove =event.target.parentElement;
+      objectRemove.remove();
+    });
+
+  });
+});
+}
+insert()
 
 
-
-DOMSelectors.removeButton = document.querySelectorAll(".remove");
-insert(card);
-clear();
-remove(DOMSelectors.display);
+DOMSelectors.form.addEventListener("submit", function(event){
+  event.preventDefault();
+  function clear(){
+    DOMSelectors.creature.value="";
+    DOMSelectors.name.value="";
+    DOMSelectors.url.value="";
+  }
+  clear()
 });
 
-function insert(card) {
-  DOMSelectors.displayName = card.Name;
-  DOMSelectors.displayRole= card.role;
-  DOMSelectors.displayUrl = card.url;
-};
-
-function clear() {
-DOMSelectors.Name.value = "";
-DOMSelectors.role.value = "";
-DOMSelectors.url.value = "";
-};
-
-function remove() {
-/* DOMSelectors.removeButton.addEventListener("click", function () {
-  document.querySelector(".display-card").remove();
-}); */
-DOMSelectors.displayName = "";
-DOMSelectors.displayRole="";
-DOMSelectors.displayUrl  = "";
-};
-console.log(remove);
-DOMSelectors.form.addEventListener("submit", function(event) {
-  event.preventDefault();
-clear();
-remove();
-insert();
-})
 
