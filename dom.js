@@ -3,7 +3,7 @@ const DOMSelectors = {
  form: document.querySelector("#form"), 
  creature: document.querySelector(".creature"),
  name: document.querySelector(".name"),
- url: document.querySelector(".url"),
+ picture: document.querySelector(".picture"),
  gallery: document.querySelector(".gallery"),
  card: document.querySelector(".card"),
  cardimg: document.querySelector(".cardimg"),
@@ -11,13 +11,13 @@ const DOMSelectors = {
 
 };
 
-function divCreator(creature, name, url){
+function divCreator(creature, name, picture){
   DOMSelectors.gallery.insertAdjacentHTML(
     "afterbegin",
     `div class="gallery"> 
     <div class="card">
     <h3>${name}</h3> 
-    <img src ="${url}" alt= "" class="cardimg">
+    <img src ="${picture}" alt= "" class="cardimg">
     <h4>${creature}</h4>
     <button class="btn"> Remove</button>
     </div>
@@ -29,8 +29,8 @@ function insert(){
     event.preventDefault();
     const creature= DOMSelectors.creature.value
     const name = DOMSelectors.name.value
-    const url= DOMSelectors.url.value
-    divCreator(creature, name, url)
+    const picture= DOMSelectors.picture.value
+    divCreator(creature, name, picture)
     const removebuttons= document.querySelectorAll(".btn");
     removebuttons.forEach((button)=> {
       button.addEventListener("click", function(event){
@@ -49,7 +49,7 @@ DOMSelectors.form.addEventListener("submit", function(event){
   function clear(){
     DOMSelectors.creature.value="";
     DOMSelectors.name.value="";
-    DOMSelectors.url.value="";
+    DOMSelectors.picture.value="";
   }
   clear()
 });
